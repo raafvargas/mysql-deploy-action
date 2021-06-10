@@ -20,6 +20,10 @@ inputs:
   DATABASE_SCRIPT:
     description: 'Script run on database'
     required: true
+  MYSQL_PROTOCOL:
+    description: 'tcp or socket'
+    required: false
+    default: socket
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -30,3 +34,4 @@ runs:
     - ${{ inputs.DATABASE_USERNAME }}
     - ${{ inputs.DATABASE_PASSWORD }}
     - ${{ inputs.DATABASE_SCRIPT }}
+    - ${{ inputs.MYSQL_PROTOCOL }}

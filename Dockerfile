@@ -1,6 +1,6 @@
 FROM gtadam89/mysql-client
 
-MAINTAINER gtadam@protonmail.ch
+LABEL MAINTAINER=gtadam@protonmail.ch
 
 COPY entrypoint.sh /entrypoint.sh
 
